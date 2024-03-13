@@ -21,8 +21,10 @@ function Footer(){
   export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Nome completo: {getNomeCompleto("Thiago", "Fernandes", "Zanon")} </Text>
       <Image style={styles.logo} source={{uri: 'https://i.pinimg.com/564x/b8/1e/55/b81e55b2571a7266083cc8bf4c7c0dd2.jpg'}}/>
+      {/* <Text style={styles.text}>Nome completo: {getNomeCompleto("Thiago", "Fernandes", "Zanon")} </Text> */}
+      <Text style={styles.text}> Olá eu sou </Text>
+      <TextInput style={{color: '#C80F60'}} defaultValue = "Digite seu nome"/>
       <Header/>
       <Footer/>
       <StatusBar style="auto" />
@@ -32,10 +34,15 @@ function Footer(){
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: 'gray',
+    width: '100%',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  textTitulo: {
+    color: 'white',
+    fontSize: 30,
   },
   text: {
     color: 'white',

@@ -8,7 +8,7 @@ const getNomeCompleto = (primeiro, segundo, terceiro) => {
 
 function Header(){
   return(
-    <Text style={styles.text}>navbar</Text>
+    <Text style={styles.navbar}>navbar</Text>
   )
 }
   
@@ -62,5 +62,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 0,
     position: 'fixed',
+    color: 'white',
+  },
+  navbar: {
+    backgroundColor: '#fff',
+    top: 0,
+    position: 'fixed',
+    width: '100%',
+    zIndex: 1,
+    color: 'white',
   }
 });

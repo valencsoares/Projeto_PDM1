@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Image, Text, TextInput, View, ScrollView, Button } from 'react-native';
+import { StyleSheet, Image, Text, FlatList, TextInput, View, ScrollView, Button } from 'react-native';
 import { useState } from 'react';
 
 function Header(){
@@ -39,6 +39,11 @@ const Clickavel = (props) => {
       <Text style={{textAlign: "center", backgroundColor: "grey", fontWeight: "bold"}}>Pizza Tradutor</Text>
       <TextInput style={{height: 40, borderWidth: 1}} placeholder='Digite algo para traduzir!' onChangeText={newText => setText(newText)} defaultValue={text}/>
       <Text style={{padding: 10, fontSize: 42}}> {text.split(' ').map((word) => word && '🍕').join(' ')} </Text>
+
+      <Text> FlatList Example </Text>
+      <FlatList data={[
+        {key: 'Ana'}, {key: 'Joana'}, {key: 'Camila'}, {key: 'Flavia'}, {key: 'Julye'}, {key: 'Juliana'}, {key: 'Luara'}, {key: 'Manuela'}]}
+        renderItem={({item}) => <Text style={styles.Item}>{item.key}</Text>}/>
     </ScrollView>  
   );
 }

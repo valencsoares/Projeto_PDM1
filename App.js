@@ -30,11 +30,15 @@ const Clickavel = (props) => {
 }
   
   export default function App() {
+    const [text, setText] = useState('');
   return (
     <ScrollView style={styles.container}>
-      <Header/>
+      {/* <Header/> 
       <Clickavel nome="Botão 1"/>
-      <Clickavel nome="Botão 2"/>
+      <Clickavel nome="Botão 2"/> */}
+      <Text style={{textAlign: "center", backgroundColor: "grey", fontWeight: "bold"}}>Pizza Tradutor</Text>
+      <TextInput style={{height: 40, borderWidth: 1}} placeholder='Digite algo para traduzir!' onChangeText={newText => setText(newText)} defaultValue={text}/>
+      <Text style={{padding: 10, fontSize: 42}}> {text.split(' ').map((word) => word && '🍕').join(' ')} </Text>
     </ScrollView>  
   );
 }
